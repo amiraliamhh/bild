@@ -1,7 +1,5 @@
-export const Work = () => {
-  return (
-    <div>
-      Work
-    </div>
-  )
-}
+export const Work = () => (
+  <div>
+    Work
+  </div>
+)

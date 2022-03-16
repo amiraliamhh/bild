@@ -4,15 +4,13 @@ import { Home } from '@/pages/Home'
 import { Work } from '@/pages/Work'
 import { ErrorBoundary } from '@/errors/ErrorBoundary'
 
-export const App = () => {
-  return (
-    <ErrorBoundary>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path='work' element={<Work />} />
-        </Routes>
-      </BrowserRouter>
-    </ErrorBoundary>
-  )
-}
+export const App = () => (
+  <ErrorBoundary>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="work" element={<Work />} />
+      </Routes>
+    </BrowserRouter>
+  </ErrorBoundary>
+)
