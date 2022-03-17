@@ -1,3 +1,8 @@
+import { PageTitle } from '@shared'
+
 export const About = () => (
-  <div>about</div>
+  <>
+    <PageTitle title='About My Business' />
+    <div>about</div>
+  </>
 )

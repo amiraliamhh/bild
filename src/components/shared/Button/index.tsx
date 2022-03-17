@@ -5,5 +5,5 @@ type ButtonAttrs = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HT
 export const Button = ({
   children, className = '', type = 'button', ...rest
 }: PropsWithChildren<ButtonAttrs>) => (
-  <button {...rest} className={`h-8 bg-green-500 text-sm text-white ${className}`} type={type}>{children}</button>
+  <button {...rest} className={`h-8 bg-green-500 hover:bg-green-600 text-sm text-white ${className}`} type={type}>{children}</button>
 )

@@ -1,3 +1,23 @@
+@font-face {
+  font-family: Myriad;
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/MYRIADPRO-REGULAR.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Myriad;
+  font-weight: 600;
+  font-style: normal;
+  src: url('/fonts/MYRIADPRO-SEMIBOLD.woff');
+  font-display: swap;
+}
+
+* {
+  font-family: Myriad, ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

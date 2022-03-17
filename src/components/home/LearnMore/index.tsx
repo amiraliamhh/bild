@@ -13,7 +13,7 @@ export const LearnMore = ({ className = '' }: LearnMoreProps) => (
         <div className='h-[23px] bg-orange-500 w-full absolute bottom-0' />
       </div>
       <div className='col-span-12 lg:col-span-7 justify-self-center max-w-lg lg:max-w-full mt-4 lg:mt-0 text-center lg:text-left'>
-        <h2 className='text-neutral-500 text-2xl font-semibold'>Get To Know Us a Little Better!</h2>
+        <h2 className='text-neutral-500 text-2xl font-semibold uppercase'>Get To Know Us a Little Better!</h2>
         <p className='text-sm mt-4 leading-6 text-zinc-500'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu erat lacus,
           vel congue mauris. Fusce velit justo, faucibus eu sagittis ac, gravida quis tortor.

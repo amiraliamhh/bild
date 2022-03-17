@@ -1,5 +1,8 @@
+import { PageTitle } from '@shared'
+
 export const Work = () => (
-  <div>
-    Work
-  </div>
+  <>
+    <PageTitle title='Check Out What I can Do' />
+    <p>Work</p>
+  </>
 )

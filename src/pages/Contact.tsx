@@ -1,3 +1,8 @@
+import { PageTitle } from '@shared'
+
 export const Contact = () => (
-  <div>contact</div>
+  <>
+    <PageTitle title='Got a Question or Inquiry?' />
+    <p>Contact</p>
+  </>
 )
