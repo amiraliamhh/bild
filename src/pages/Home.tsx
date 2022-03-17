@@ -4,6 +4,6 @@ export const Home = () => (
   <>
     <Banner />
     <LearnMore className='mt-[12rem] md:mt-[16.875rem] lg:mt-[16.875rem]' />
-    <Featured className='mt-10' />
+    <Featured className='mt-10 mb-10' />
   </>
 )

@@ -27,7 +27,9 @@ module.exports = {
       },
       zinc: {
         ...colors.zinc,
+        400: '#A5A5A5',
         500: '#8A8888',
+        800: '#322F2F',
       },
       orange: {
         ...colors.orange,
@@ -45,6 +47,7 @@ module.exports = {
       8: '2.5rem',
       9: '2.8125rem',
       10: '3.125rem',
+      12: '3.75rem',
       24: '7.5rem',
       105: '32.8125rem',
     },

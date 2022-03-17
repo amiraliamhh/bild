@@ -15,6 +15,7 @@ export const Link = ({
 }: Props) => {
   const { pathname } = useResolvedPath(to)
   const match = useMatch({ path: pathname, end: true })
+  console.log(match, to, activeClass)
 
   return (
     <RRLink {...rest} to={to} className={`${className} ${match ? activeClass : ''}`}>

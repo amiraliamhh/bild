@@ -9,7 +9,7 @@ interface NavItem {
   link: string
 }
 
-const navItems: NavItem[] = [
+export const navItems: NavItem[] = [
   {
     title: 'Home',
     link: '/',
