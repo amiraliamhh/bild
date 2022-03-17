@@ -19,8 +19,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@shared": [
+        "./src/components/shared"
       ]
-    }
+    },
+    "types": ["vite-plugin-svgr/client"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

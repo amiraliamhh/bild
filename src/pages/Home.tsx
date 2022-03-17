@@ -1,5 +1,5 @@
+import { Banner } from '@/components/home'
+
 export const Home = () => (
-  <div>
-    Home
-  </div>
+  <Banner />
 )

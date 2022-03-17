@@ -27,11 +27,10 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     'import/no-unresolved': 'off',
-    'import/extensions': [
-      'error',
-      {
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': 'off',
+    'jsx-quotes': ['error', 'prefer-single'],
+    'import/no-extraneous-dependencies': 'off',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 }
