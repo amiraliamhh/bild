@@ -29,8 +29,9 @@ const navItems: NavItem[] = [
 ]
 
 export const Navbar = ({ className = '' }: NavbarProps) => (
-  <nav className={`container mx-auto mt-6 ${className}`}>
-    {
+  <nav className={`sticky pt-6 pb-5 top-0 z-10 bg-white ${className}`}>
+    <div className='container mx-auto'>
+      {
       navItems.map(({ title, link }, index) => (
         <Link
           to={link}
@@ -38,12 +39,13 @@ export const Navbar = ({ className = '' }: NavbarProps) => (
           // to use array index as key
           // eslint-disable-next-line react/no-array-index-key
           key={index}
-          className='mr-7 text-lg text-neutral-500 hover:text-neutral-600'
+          className='mr-7 text-lg text-neutral-500 hover:text-neutral-600 font-semibold'
           activeClass='text-green-500 hover:text-green-600'
         >
           {title}
         </Link>
       ))
     }
+    </div>
   </nav>
 )

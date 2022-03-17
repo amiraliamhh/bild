@@ -5,7 +5,7 @@ import { Header, Navbar } from '@shared'
 export const Layout = () => (
   <>
     <Header />
-    <Navbar className='mb-5' />
+    <Navbar />
     <Outlet />
   </>
 )

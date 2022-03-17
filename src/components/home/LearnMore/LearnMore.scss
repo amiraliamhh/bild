@@ -1,0 +1,9 @@
+.video-player {
+  &:hover {
+    @apply bg-orange-700;
+
+    & > div {
+      @apply bg-orange-600;
+    }
+  }
+}
