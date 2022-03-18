@@ -5,16 +5,16 @@ interface StatementsProps {
 }
 
 const Statements = ({ children, title }: PropsWithChildren<StatementsProps>) => (
-  <section className='col-span-6 mt-9'>
-    <h4 className='text-2xl font-semibold text-zinc-500'>{title}</h4>
-    <p className='mt-4 text-sm leading-[1.375rem] text-zinc-500'>{children}</p>
+  <section className='col-span-12 md:col-span-6 mt-9 flex flex-col items-center'>
+    <h4 className='text-center md:text-left text-2xl font-semibold text-zinc-500 uppercase'>{title}</h4>
+    <p className='max-w-md md:max-w-full justify-self-center text-center md:text-left mt-4 text-sm leading-[1.375rem] text-zinc-500'>{children}</p>
   </section>
 )
 
 export const AboutContent = () => (
   <section className='container mx-auto mt-9 grid grid-cols-12 gap-4'>
-    <img src='/about@2x.jpg' alt='About Me' className='col-span-5' width='380' height='260' />
-    <div className='col-span-7 px-2 text-sm text-zinc-500 leading-[1.375rem] flex flex-col justify-between'>
+    <img src='/about@2x.jpg' alt='About Me' className='col-span-12 md:col-span-5 justify-self-center' width='380' height='260' />
+    <div className='col-span-12 md:col-span-7 px-2 text-sm text-zinc-500 leading-[1.375rem] flex flex-col justify-between text-center md:text-left max-w-md md:max-w-full justify-self-center'>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Pellentesque eu erat lacus, vel congue mauris. Fusce velit
@@ -23,7 +23,7 @@ export const AboutContent = () => (
         sit amet congue ut, luctus a nulla. Donec sit amet sapien neque,
         id ullamcorper diam. Nulla facilisi. Pellentesque pellentesque arcu a elit congue lacinia.
       </p>
-      <p>
+      <p className='mt-3 lg:mt-0'>
         Nullam tellus turpis, fringilla sit amet congue ut, luctus a
         nulla. Donec sit amet sapien neque, id ullamcorper diam. Nulla
         facilisi. Pellentesque pellentesque arcu a elit congue lacinia.
