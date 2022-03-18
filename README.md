@@ -1,8 +1,10 @@
 TODO:
-1. font
-2. responsive images
-3. Icon to typography
-4. i18n
-5. a11y check
-6. carousel
-7. api
+[X] font
+[] responsive images
+[] Icon to typography
+[] i18n
+[] a11y check
+[] carousel
+[] api
+[] 404 page
+[] 500 page
