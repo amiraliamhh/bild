@@ -6,9 +6,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint ./src/**/*.{ts,tsx} --fix"
+    "lint": "eslint ./src/**/*.{ts,tsx} --fix",
+    "server": "node server/serve.js"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "google-map-react": "^2.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -30,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "json-server": "^0.17.0",
     "postcss": "^8.4.12",
     "sass": "^1.49.9",
     "tailwindcss": "^3.0.23",

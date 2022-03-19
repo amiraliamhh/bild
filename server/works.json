@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "hungry panini",
+    "image": "/images/work1@2x.jpg",
+    "category": "print"
+  },
+  {
+    "id": 2,
+    "title": "evil brown",
+    "image": "/images/work2@2x.jpg",
+    "category": "photography"
+  },
+  {
+    "id": 3,
+    "title": "jovial carson",
+    "image": "/images/work3@2x.jpg",
+    "category": "web"
+  },
+  {
+    "id": 4,
+    "title": "small goldwasser",
+    "image": "/images/work4@2x.jpg",
+    "category": "applications"
+  },
+  {
+    "id": 5,
+    "title": "hopeful murdock",
+    "image": "/images/work5@2x.jpg",
+    "category": "print"
+  },
+  {
+    "id": 6,
+    "title": "fervent bell",
+    "image": "/images/work6@2x.jpg",
+    "category": "photography"
+  },
+  {
+    "id": 7,
+    "title": "grave bell",
+    "image": "/images/work7@2x.jpg",
+    "category": "web"
+  },
+  {
+    "id": 8,
+    "title": "admiring wescoff",
+    "image": "/images/work8@2x.jpg",
+    "category": "applications"
+  },
+  {
+    "id": 9,
+    "title": "gloomy einstein",
+    "image": "/images/work9.png",
+    "category": "print"
+  },
+  {
+    "id": 10,
+    "title": "naughty euclid",
+    "image": "/images/work10.jpg",
+    "category": "photography"
+  },
+  {
+    "id": 11,
+    "title": "grave poincare",
+    "image": "/images/work11.jpg",
+    "category": "web"
+  },
+  {
+    "id": 12,
+    "title": "grave hypatia",
+    "image": "/images/work12.png",
+    "category": "applications"
+  },
+  {
+    "id": 13,
+    "title": "pedantic curie",
+    "image": "/images/work13.jpg",
+    "category": "applications"
+  },
+  {
+    "id": 14,
+    "title": "pensive galileo",
+    "image": "/images/work14.jpg",
+    "category": "print"
+  },
+  {
+    "id": 15,
+    "title": "cranky borg",
+    "image": "/images/work15.jpg",
+    "category": "web"
+  },
+  {
+    "id": 16,
+    "title": "evil swirles",
+    "image": "/images/work16.jpg",
+    "category": "applications"
+  },
+  {
+    "id": 17,
+    "title": "pedantic wescoff",
+    "image": "/images/work17.jpg",
+    "category": "photography"
+  },
+  {
+    "id": 18,
+    "title": "sharp noyce",
+    "image": "/images/work18.jpg",
+    "category": "photography"
+  },
+  {
+    "id": 19,
+    "title": "determined torvalds",
+    "image": "/images/work19.jpg",
+    "category": "photography"
+  },
+  {
+    "id": 20,
+    "title": "trusting swartz",
+    "image": "/images/work20.jpg",
+    "category": "web"
+  },
+  {
+    "id": 21,
+    "title": "small joliot",
+    "image": "/images/work21.jpg",
+    "category": "web"
+  },
+  {
+    "id": 22,
+    "title": "suspicious albattani",
+    "image": "/images/work22.jpg",
+    "category": "print"
+  },
+  {
+    "id": 23,
+    "title": "mad heyrovsky",
+    "image": "/images/work23.jpg",
+    "category": "print"
+  },
+  {
+    "id": 24,
+    "title": "clever austin",
+    "image": "/images/work24.jpg",
+    "category": "web"
+  },
+  {
+    "id": 25,
+    "title": "backstabbing hopper",
+    "image": "/images/work25.jpg",
+    "category": "web"
+  },
+  {
+    "id": 26,
+    "title": "furious pare",
+    "image": "/images/work26.jpg",
+    "category": "applications"
+  },
+  {
+    "id": 27,
+    "title": "angry lalande",
+    "image": "/images/work27.jpg",
+    "category": "web"
+  },
+  {
+    "id": 28,
+    "title": "angry roentgen",
+    "image": "/images/work28.jpg",
+    "category": "photography"
+  }
+]

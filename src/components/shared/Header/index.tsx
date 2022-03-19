@@ -47,8 +47,8 @@ const icons: IconItem[] = [
 
 export const Header = () => (
   <header className='container mx-auto grid grid-cols-2 items-center mt-6 border-b pb-6'>
-    <img src='/logo.svg' alt='Display Logo' />
-    <div className='flex justify-end'>
+    <img className='col-span-2 md:col-span-1' src='/logo.svg' alt='Display Logo' />
+    <div className='flex justify-end col-span-2 md:col-span-1 mt-4 md:mt-0'>
       {
           icons.map(({ icon: Icon, url, hoverClass }, index) => (
             // links are hardcoded and are referring to safe websites, so not adding

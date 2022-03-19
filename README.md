@@ -5,9 +5,13 @@ TODO:
 [] i18n
 [] a11y check
 [] carousel
-[] api
+[X] api
 [] 404 page
 [] 500 page
 [] video
-[] tab change animation
+[X] tab change animation
 [] seo metadata
+[] pwa
+[] readme!
+[] homepage image animation
+[] contact send message
