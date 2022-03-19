@@ -21,6 +21,9 @@ export const Map = () => (
         lng: 18.94,
       }}
       defaultZoom={12}
+      options={{
+        scrollwheel: false,
+      }}
     >
       <Marker
         lat={42.77558433388258}
