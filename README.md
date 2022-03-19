@@ -10,3 +10,4 @@ TODO:
 [] 500 page
 [] video
 [] tab change animation
+[] seo metadata
