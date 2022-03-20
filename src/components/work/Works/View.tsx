@@ -97,8 +97,10 @@ export const WorksView = ({ className = '' }: WorksViewProps) => {
         {
       loading
       && (
-      <div>
-        loading ...
+      <div className='flex items-center my-4'>
+        <div className='inline-block w-6 h-6 mr-4 animate-spin border-l-2 border-b-2 border-green-500 rounded-full' />
+        {' '}
+        <span className='text-zinc-500 font-semibold'>loading</span>
       </div>
       )
     }

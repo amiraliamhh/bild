@@ -21,7 +21,7 @@ interface UseFetchResult <T> {
   reset: () => void
 }
 
-const sleep = () => new Promise((resolve) => {
+export const sleep = () => new Promise((resolve) => {
   setTimeout(() => { resolve(true) }, 500)
 })
 
