@@ -6,12 +6,14 @@ import { Work } from '@/pages/Work'
 import { Contact } from '@/pages/Contact'
 import { About } from '@/pages/About'
 import { ErrorBoundary } from '@/errors/ErrorBoundary'
+import { NotFound } from '@/errors/NotFound'
 
 export const App = () => (
   <ErrorBoundary>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
+          <Route path='*' element={<NotFound />} />
           <Route index element={<Home />} />
           <Route path='work' element={<Work />} />
           <Route path='contact' element={<Contact />} />
