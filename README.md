@@ -14,7 +14,7 @@ TODO:
 [] pwa
 [] readme!
 [X] homepage image animation
-[] contact send message
+[X] contact send message
 [X] works - fix constant loading
 [] recaptcha v3
 [] grid / list

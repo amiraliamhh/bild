@@ -1,5 +1,5 @@
 import {
-  FormEvent, useEffect, useRef, useState,
+  FormEvent, useCallback, useEffect, useRef, useState,
 } from 'react'
 import axios from 'axios'
 
@@ -14,24 +14,41 @@ interface FormProps {
 
 // eslint-disable-next-line no-useless-escape
 const emailRegex = '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+const recaptchaSiteKey = typeof import.meta.env.VITE_RECAPTCHA_SITE_KEY === 'string' ? import.meta.env.VITE_RECAPTCHA_SITE_KEY : ''
 
 export const Form = ({ className = '' }: FormProps) => {
   const [showTextareaWarning, setShowTextareaWarning] = useState(false)
   const [loading, setLoading] = useState(false)
   const [sentMessage, setSentMessage] = useState('')
+  const token = useRef('')
   const textarea = useRef<HTMLTextAreaElement>(null)
+
+  const execRecaptcha = useCallback(() => new Promise((resolve) => {
+    const w = window as any
+    w.grecaptcha.ready(() => {
+      w.grecaptcha
+        .execute(recaptchaSiteKey, { action: 'contact' })
+        .then((reToken: string) => {
+          resolve(reToken)
+        })
+    })
+  }), [])
 
   const sendMessage = async (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault()
+    setLoading(true)
 
     const data = new FormData(evt.currentTarget)
     const values = Object.fromEntries(data.entries()) as any
 
     try {
-      setLoading(true)
+      token.current = await execRecaptcha() as string
       // simulate network request
       await sleep()
-      await axios.post('/messages', values)
+      await axios.post('/messages', {
+        ...values,
+        recaptchaToken: token.current,
+      })
       setSentMessage(values.message)
       document.documentElement.scrollTo(0, 500)
     } finally {
@@ -40,6 +57,10 @@ export const Form = ({ className = '' }: FormProps) => {
   }
 
   useEffect(() => {
+    const script = document.createElement('script')
+    script.src = `https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`
+    document.body.appendChild(script)
+
     const handleMessageLengthExceed = (e: KeyboardEvent) => {
       const el = e.currentTarget as HTMLTextAreaElement
       if (el.value.length === 1e3) {
@@ -105,20 +126,21 @@ export const Form = ({ className = '' }: FormProps) => {
                   ref={textarea}
                 />
                 {
-          showTextareaWarning
-          && <span className='text-orange-500'>Maximum allowed characters for this field is 1000 characters</span>
-        }
+                  showTextareaWarning
+                  && <span className='text-orange-500'>Maximum allowed characters for this field is 1000 characters</span>
+                }
               </div>
               <Button className='uppercase px-[0.875rem] mt-3' type='submit'>
                 {
-          loading
-            ? <div className='w-5 h-5 animate-spin border-2 border-white rounded-full border-r-0 border-t-0' />
-            : 'Send Message'
-        }
+                  loading
+                    ? <div className='w-5 h-5 animate-spin border-2 border-white rounded-full border-r-0 border-t-0' />
+                    : 'Send Message'
+                }
               </Button>
             </>
           )
       }
+      <div className='g-recaptcha' data-sitekey={recaptchaSiteKey} data-size='invisible' />
     </form>
   )
 }
