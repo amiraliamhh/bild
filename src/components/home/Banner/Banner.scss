@@ -1,0 +1,38 @@
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(120px);
+  }
+}
+
+$animation-duration: 600ms;
+$animation-delay: 200ms;
+
+@mixin animationMixin {
+  opacity: 0;
+  animation: $animation-duration ease-out slideBottom;
+  animation-fill-mode: forwards;
+}
+
+.banner-img {
+  @include animationMixin;
+
+  animation-delay: $animation-delay;
+}
+
+.description {
+  @include animationMixin;
+  
+  animation-delay: $animation-delay + $animation-duration;
+}
+
+.browser {
+  @include animationMixin;
+  
+  animation-delay: $animation-delay + $animation-duration * 2;
+}

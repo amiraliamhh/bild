@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import { ScrollTop } from '@shared'
 import { Layout } from '@/layouts/Layout'
 import { Home } from '@/pages/Home'
 import { Work } from '@/pages/Work'
@@ -11,15 +12,17 @@ import { NotFound } from '@/errors/NotFound'
 export const App = () => (
   <ErrorBoundary>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route path='*' element={<NotFound />} />
-          <Route index element={<Home />} />
-          <Route path='work' element={<Work />} />
-          <Route path='contact' element={<Contact />} />
-          <Route path='about' element={<About />} />
-        </Route>
-      </Routes>
+      <ScrollTop>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route path='*' element={<NotFound />} />
+            <Route index element={<Home />} />
+            <Route path='work' element={<Work />} />
+            <Route path='contact' element={<Contact />} />
+            <Route path='about' element={<About />} />
+          </Route>
+        </Routes>
+      </ScrollTop>
     </BrowserRouter>
   </ErrorBoundary>
 )
