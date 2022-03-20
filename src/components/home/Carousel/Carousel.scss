@@ -1,0 +1,13 @@
+.selected {
+  @apply cursor-pointer;
+
+  &:hover {
+    a {
+      display: flex;
+    }
+
+    img {
+      opacity: .9;
+    }
+  }
+}

@@ -42,7 +42,7 @@ export const TabContent = ({ indices, activeTab, id }: TabContentProps) => {
                   // to use array index as key
                   // eslint-disable-next-line react/no-array-index-key
                     <li className='flex items-center mb-2' key={index}>
-                      <ChevronRight className='mr-2' width='7px' height='10px' />
+                      <ChevronRight className='mr-2 fill-[#423E3E]' width='7px' height='10px' />
                       {content}
                     </li>
                   ))

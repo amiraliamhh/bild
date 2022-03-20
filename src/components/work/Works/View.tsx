@@ -15,7 +15,7 @@ interface WorksViewProps {
   className?: string
 }
 
-interface WorkItem {
+export interface WorkItem {
   id: number
   title: string
   image: string
