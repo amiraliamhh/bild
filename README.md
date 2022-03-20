@@ -16,8 +16,8 @@ TODO:
 [X] homepage image animation
 [X] contact send message
 [X] works - fix constant loading
-[] recaptcha v3
-[] grid / list
+[X] recaptcha v3
+[X] grid / list
 
 readme:
 [] google map billing account

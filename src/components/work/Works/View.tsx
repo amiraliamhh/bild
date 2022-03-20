@@ -4,10 +4,11 @@ import {
 } from 'react'
 
 import { useFetch } from '@/hooks'
-import { ReactComponent as LinkIcon } from '@/assets/link.svg'
 
 import { NoResult } from './NoResult'
 import { FilterContext } from './index'
+import { GridView } from './GridView'
+import { ListView } from './ListView'
 import './View.scss'
 
 interface WorksViewProps {
@@ -25,7 +26,7 @@ export const WorksView = ({ className = '' }: WorksViewProps) => {
   const currentPage = useRef(0)
   const fetchNext = useRef(true)
   const observer = useRef<IntersectionObserver>()
-  const { category } = useContext(FilterContext)
+  const { category, view } = useContext(FilterContext)
 
   const {
     fetch, response, loading, reset,
@@ -71,39 +72,50 @@ export const WorksView = ({ className = '' }: WorksViewProps) => {
     if (node) observer.current.observe(node)
   }, [loading, fetchNext])
 
+  if (!response?.length && !loading) return <NoResult />
+
   return (
     <>
-      <section className={`${className} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4`}>
+      <section
+        className={`grid gap-4 ${view === 'grid' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'} ${className}`}
+      >
         {
-        response?.length
-          ? response?.map(({ id, image, title }, index) => (
-            <div
-              key={id}
-              className='work-item w-full md:h-[300px] lg:h-[220px] bg-slate-100 relative'
-              {...(index === response.length - 1 ? { ref: lastWorkElement } : {})}
-            >
-              <img className='w-full h-full' src={`${import.meta.env.VITE_API_BASE}${image}`} alt={title} width='300' height='220' />
-              <a className='absolute inset-0 m-auto justify-center items-center hidden' href='http://example.com/' target='_blank' rel='noreferrer'>
-                <button className='w-[97px] h-[97px] bg-green-500 hover:bg-green-600 rounded-full flex justify-center items-center'>
-                  <LinkIcon width='32px' height='42px' />
-                </button>
-              </a>
-            </div>
-          ))
-          : !loading && <NoResult />
-      }
+          response?.map(({ id, image, title }, index) => {
+            const ref = index === response.length - 1 ? { ref: lastWorkElement } : {}
+
+            if (view === 'list') {
+              return (
+                <ListView
+                  title={title}
+                  image={image}
+                  key={id}
+                  {...ref}
+                />
+              )
+            }
+
+            return (
+              <GridView
+                title={title}
+                image={image}
+                key={id}
+                {...ref}
+              />
+            )
+          })
+        }
       </section>
       <div className='h-10 w-full flex items-center'>
         {
-      loading
-      && (
-      <div className='flex items-center my-4'>
-        <div className='inline-block w-6 h-6 mr-4 animate-spin border-l-2 border-b-2 border-green-500 rounded-full' />
-        {' '}
-        <span className='text-zinc-500 font-semibold'>loading</span>
-      </div>
-      )
-    }
+          loading
+          && (
+          <div className='flex items-center'>
+            <div className='inline-block w-6 h-6 mr-4 animate-spin border-l-2 border-b-2 border-green-500 rounded-full' />
+            {' '}
+            <span className='text-zinc-500 font-semibold'>loading</span>
+          </div>
+          )
+        }
       </div>
     </>
   )

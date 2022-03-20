@@ -11,11 +11,17 @@ export const FilterContext = createContext({
   category: '',
   // eslint-disable-next-line
   setCategory: (state: string) => {},
+  view: 'grid',
+  // eslint-disable-next-line
+  setView: (state: string) => {},
 })
 
 export const Works = ({ className = '' }: WorksProps) => {
   const [category, setCategory] = useState('all')
-  const ctxValue = useMemo(() => ({ category, setCategory }), [category])
+  const [view, setView] = useState('grid')
+  const ctxValue = useMemo(() => ({
+    category, setCategory, view, setView,
+  }), [category, view])
 
   return (
     <main className={`${className} container mx-auto mt-9`}>

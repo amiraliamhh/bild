@@ -1,5 +1,5 @@
 import {
-  Fragment, useContext, useEffect, useState,
+  Fragment, useContext, useEffect,
 } from 'react'
 
 import { ReactComponent as GridView } from '@/assets/grid-view.svg'
@@ -19,8 +19,9 @@ const viewIconNeutral = 'fill-neutral-500 hover:fill-neutral-600'
 const viewIconSelected = 'fill-green-500 hover:fill-green-600'
 
 export const Filter = () => {
-  const [currentView, setView] = useState('grid')
-  const { category, setCategory } = useContext(FilterContext)
+  const {
+    category, setCategory, view, setView,
+  } = useContext(FilterContext)
 
   useEffect(() => {
     const changeFilter = () => {
@@ -52,11 +53,11 @@ export const Filter = () => {
       <div className='flex col-span-2 md:col-span-1 mt-4 md:mt-0 justify-self-end'>
         <GridView
           onClick={() => { setView('grid') }}
-          className={`cursor-pointer ${currentView === 'grid' ? viewIconSelected : viewIconNeutral}`}
+          className={`cursor-pointer ${view === 'grid' ? viewIconSelected : viewIconNeutral}`}
         />
         <ListView
           onClick={() => { setView('list') }}
-          className={`cursor-pointer ml-[10px] ${currentView === 'list' ? viewIconSelected : viewIconNeutral}`}
+          className={`cursor-pointer ml-[10px] ${view === 'list' ? viewIconSelected : viewIconNeutral}`}
         />
       </div>
     </section>
