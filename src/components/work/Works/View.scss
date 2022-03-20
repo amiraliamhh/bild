@@ -1,0 +1,11 @@
+.work-item {
+  &:hover {
+    img {
+      opacity: .5;
+    }
+    
+    a {
+      display: flex;
+    }
+  }
+}

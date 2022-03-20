@@ -15,3 +15,4 @@ TODO:
 [] readme!
 [] homepage image animation
 [] contact send message
+[] works - fix constant loading

@@ -29,7 +29,7 @@ export const navItems: NavItem[] = [
 ]
 
 export const Navbar = ({ className = '' }: NavbarProps) => (
-  <nav className={`sticky pt-6 pb-5 top-0 z-10 bg-white ${className}`}>
+  <nav id='navbar' className={`sticky pt-6 pb-5 top-0 z-10 bg-white ${className}`}>
     <div className='container mx-auto'>
       {
       navItems.map(({ title, link }, index) => (
