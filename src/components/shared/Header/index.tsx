@@ -1,10 +1,13 @@
 import { FunctionComponent, SVGProps } from 'react'
+
 import { ReactComponent as Twitter } from '@/assets/twitter.svg'
 import { ReactComponent as Facebook } from '@/assets/facebook.svg'
 import { ReactComponent as RSS } from '@/assets/rss.svg'
 import { ReactComponent as Pinterest } from '@/assets/pinterest.svg'
 import { ReactComponent as GooglePlus } from '@/assets/google-plus.svg'
 import { ReactComponent as Dribbble } from '@/assets/dribbble.svg'
+
+import { Logo } from '../Logo'
 
 interface IconItem {
   icon: FunctionComponent<SVGProps<SVGSVGElement>>
@@ -47,7 +50,8 @@ const icons: IconItem[] = [
 
 export const Header = () => (
   <header className='container mx-auto grid grid-cols-2 items-center mt-6 border-b pb-6'>
-    <img className='col-span-2 md:col-span-1' src='/logo.svg' alt='Display Logo' />
+    <Logo className='col-span-2 md:col-span-1' />
+    {/* <img className='col-span-2 md:col-span-1' src='/logo.svg' alt='Display Logo' /> */}
     <div className='flex justify-end col-span-2 md:col-span-1 mt-4 md:mt-0'>
       {
           icons.map(({ icon: Icon, url, hoverClass }, index) => (
