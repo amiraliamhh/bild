@@ -15,7 +15,7 @@ export const ListView = forwardRef<HTMLDivElement, ListViewProps>(
       className='work-item w-full lg:h-[220px] rounded overflow-hidden flex'
       ref={ref}
     >
-      <div className='min-w-[300px] h-[220px] relative'>
+      <div className='min-w-[150px] md:min-w-[300px] max-w-[50%] h-[220px] relative'>
         <img src={`${import.meta.env.VITE_API_BASE}${image}`} alt={title} width='300' height='220' />
         <a className='absolute inset-0 m-auto justify-center items-center hidden' href='http://example.com/' target='_blank' rel='noreferrer'>
           <button className='w-[97px] h-[97px] bg-green-500 hover:bg-green-600 rounded-full flex justify-center items-center'>
