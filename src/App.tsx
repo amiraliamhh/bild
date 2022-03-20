@@ -10,8 +10,8 @@ import { ErrorBoundary } from '@/errors/ErrorBoundary'
 import { NotFound } from '@/errors/NotFound'
 
 export const App = () => (
-  <ErrorBoundary>
-    <BrowserRouter>
+  <BrowserRouter>
+    <ErrorBoundary>
       <ScrollTop>
         <Routes>
           <Route path='/' element={<Layout />}>
@@ -23,6 +23,6 @@ export const App = () => (
           </Route>
         </Routes>
       </ScrollTop>
-    </BrowserRouter>
-  </ErrorBoundary>
+    </ErrorBoundary>
+  </BrowserRouter>
 )
