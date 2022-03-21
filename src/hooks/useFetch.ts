@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import axios from 'axios'
 
 type Query = {
@@ -37,7 +37,7 @@ export const useFetch = <T = any>(
     setResponse(defaultResponse || null)
   }
 
-  const fetch = async (qs: Partial<Query> = {}) => {
+  const fetch = useCallback(async (qs: Partial<Query> = {}) => {
     setLoading(true)
     try {
       const { data } = await axios.get(url, {
@@ -49,7 +49,7 @@ export const useFetch = <T = any>(
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
 
   return {
     response,
