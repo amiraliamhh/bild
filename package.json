@@ -8,7 +8,8 @@
     "preview": "vite preview",
     "lint": "eslint ./src/**/*.{ts,tsx} --fix",
     "server": "node server/serve.js",
-    "start": "serve -s ./dist"
+    "start": "concurrently \"node server/serve.js\" \"serve -s ./dist\"",
+    "start:dev": "concurrently \"vite\" \"node server/serve.js\""
   },
   "dependencies": {
     "axios": "^0.26.1",
@@ -29,6 +30,7 @@
     "@typescript-eslint/parser": "^5.15.0",
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.4",
+    "concurrently": "^7.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.3",
