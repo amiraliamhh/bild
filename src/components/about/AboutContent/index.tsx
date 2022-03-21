@@ -6,7 +6,7 @@ interface StatementsProps {
 
 const Statements = ({ children, title }: PropsWithChildren<StatementsProps>) => (
   <section className='col-span-12 md:col-span-6 mt-9 flex flex-col items-center'>
-    <h4 className='text-center md:text-left text-2xl font-semibold text-zinc-500 uppercase'>{title}</h4>
+    <h2 className='text-center md:text-left text-2xl font-semibold text-zinc-500 uppercase'>{title}</h2>
     <p className='max-w-md md:max-w-full justify-self-center text-center md:text-left mt-4 text-sm leading-[1.375rem] text-zinc-500'>{children}</p>
   </section>
 )
