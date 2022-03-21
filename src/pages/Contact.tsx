@@ -8,7 +8,6 @@ export const Contact = () => (
     <Helmet>
       <title>Contact Us - Display</title>
       <meta name='description' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' />
-      <link rel='canonical' href='/contact' />
     </Helmet>
     <PageTitle title='Got a Question or Inquiry?' />
     <Map />

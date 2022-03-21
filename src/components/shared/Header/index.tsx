@@ -13,6 +13,7 @@ interface IconItem {
   icon: FunctionComponent<SVGProps<SVGSVGElement>>
   url: string
   hoverClass: string
+  name: string
 }
 
 const icons: IconItem[] = [
@@ -20,31 +21,37 @@ const icons: IconItem[] = [
     icon: Twitter,
     url: 'https://twitter.com/',
     hoverClass: 'hover:fill-[#00B9F7]',
+    name: 'twitter',
   },
   {
     icon: Facebook,
     url: 'https://www.facebook.com/',
     hoverClass: 'hover:fill-[#1877F2]',
+    name: 'facebook',
   },
   {
     icon: RSS,
     url: 'https://rss.com/',
     hoverClass: 'hover:fill-[#F89903]',
+    name: 'RSS',
   },
   {
     icon: Pinterest,
     url: 'https://www.pinterest.com/',
     hoverClass: 'hover:fill-[#E60023]',
+    name: 'pinterest',
   },
   {
     icon: GooglePlus,
     url: 'https://plus.google.com/',
     hoverClass: 'hover:fill-[#DD4F43]',
+    name: 'google-plus',
   },
   {
     icon: Dribbble,
     url: 'https://dribbble.com/',
     hoverClass: 'hover:fill-[#ea4c89]',
+    name: 'dribbble',
   },
 ]
 
@@ -54,7 +61,9 @@ export const Header = () => (
     {/* <img className='col-span-2 md:col-span-1' src='/logo.svg' alt='Display Logo' /> */}
     <div className='flex justify-end col-span-2 md:col-span-1 mt-4 md:mt-0'>
       {
-          icons.map(({ icon: Icon, url, hoverClass }, index) => (
+          icons.map(({
+            icon: Icon, url, hoverClass, name,
+          }, index) => (
             // links are hardcoded and are referring to safe websites, so not adding
             // a rel attr won't come with a security risk
             // eslint-disable-next-line react/jsx-no-target-blank
@@ -65,6 +74,7 @@ export const Header = () => (
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               target='_blank'
+              aria-label={name}
             >
               <Icon
                 className={`ml-[8.5px] fill-gray-300 ${hoverClass}`}

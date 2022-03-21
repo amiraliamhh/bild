@@ -126,7 +126,7 @@ export const Carousel = ({ className = '' }: CarouselProps) => {
       </section>
       <div className='container grid grid-cols-12 gap-4 mt-10'>
         <div className='col-span-12 md:col-span-8 md:col-start-3 flex items-center'>
-          <button className='cursor-pointer' onClick={() => { move('left') }} disabled={selected === 0}>
+          <button aria-label='move-left' className='cursor-pointer' onClick={() => { move('left') }} disabled={selected === 0}>
             <Chevron className={`min-w-[21px] h-[31px] rotate-180 ${selected === 0 ? 'fill-[#EFEFEF]' : 'fill-green-500 hover:fill-green-600'}`} />
           </button>
           <div className='px-10'>
@@ -137,7 +137,7 @@ export const Carousel = ({ className = '' }: CarouselProps) => {
               justo, faucibus eu sagittis ac, gravida quis tortor.
             </p>
           </div>
-          <button className='cursor-pointer' onClick={() => { move('right') }} disabled={selected === (response?.length || limit) - 1}>
+          <button aria-label='move-right' className='cursor-pointer' onClick={() => { move('right') }} disabled={selected === (response?.length || limit) - 1}>
             <Chevron className={`min-w-[21px] h-[31px] ${selected < (response?.length || limit) - 1 ? 'fill-green-500 hover:fill-green-600' : 'fill-[#EFEFEF]'}`} />
           </button>
         </div>

@@ -4,13 +4,13 @@ TODO:
 [X] Icon to typography
 [] i18n
 [] a11y check
-[] carousel
+[X] carousel
 [X] api
 [X] 404 page
 [X] 500 page
-[] video
+[X] video
 [X] tab change animation
-[] seo metadata
+[X] seo metadata
 [] pwa
 [] readme!
 [X] homepage image animation

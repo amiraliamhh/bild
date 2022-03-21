@@ -7,8 +7,6 @@ export const Home = () => (
     <Helmet>
       <title>Homepage - Display</title>
       <meta name='description' content='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' />
-      {/* generally, absolute href is preferable */}
-      <link rel='canonical' href='/' />
     </Helmet>
     <Banner />
     <LearnMore className='mt-[22rem] sm:mt-[20rem] md:mt-[16.875rem]' />

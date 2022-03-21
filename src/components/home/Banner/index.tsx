@@ -11,7 +11,7 @@ export const Banner = () => {
   return (
     <section className='h-[16rem] sm:h-[20rem] md:h-105 bg-green-500 relative'>
       <div className='w-full h-full overflow-hidden'>
-        <img src='/sunburst.svg' className='w-full' alt='sunburst' />
+        <img width='1468' height='972' src='/sunburst.svg' className='w-full' alt='sunburst' />
       </div>
       <div className='absolute container mx-auto top-0 left-0 right-0 flex flex-col items-center'>
         <div className='w-[88%]'>

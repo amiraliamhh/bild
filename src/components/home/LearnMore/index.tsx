@@ -18,6 +18,7 @@ export const LearnMore = ({ className = '' }: LearnMoreProps) => {
           <button
             className='video-player col-span-12 lg:col-span-5 min-w-[380px] bg-orange-600 h-[240px] justify-self-center self-center relative cursor-pointer'
             onClick={() => { setShowVideo(true) }}
+            aria-label='play'
           >
             <Play className='absolute m-auto inset-0 w-9 h-14' />
             <div className='h-[23px] bg-orange-500 w-full absolute bottom-0' />
