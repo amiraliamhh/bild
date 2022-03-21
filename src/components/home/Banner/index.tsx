@@ -9,7 +9,7 @@ export const Banner = () => {
   const bannerImg = useRef(null)
 
   return (
-    <section className='h-105 bg-green-500 relative'>
+    <section className='h-[16rem] sm:h-[20rem] md:h-105 bg-green-500 relative'>
       <div className='w-full h-full overflow-hidden'>
         <img src='/sunburst.svg' className='w-full' alt='sunburst' />
       </div>
