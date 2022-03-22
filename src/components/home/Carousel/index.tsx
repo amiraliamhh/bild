@@ -1,7 +1,7 @@
 import {
   KeyboardEvent,
   useCallback,
-  useEffect, useMemo, useRef, useState,
+  useEffect, useRef, useState,
 } from 'react'
 
 import { WorkItem } from '@/components/work/Works/View'
@@ -19,7 +19,10 @@ const limit = 7
 
 export const Carousel = ({ className = '' }: CarouselProps) => {
   const carousel = useRef<HTMLDivElement>(null)
-  const screenWidth = useMemo(() => window.innerWidth, [])
+  // it's better to memoize this value to prevent constant re-layout,
+  // I commented it for this demo so there wouldn't be a need for page refresh
+  // whenever viewport size changes
+  // const screenWidth = useMemo(() => window.innerWidth, [])
   const [selected, setSelected] = useState(3)
   const slideShowDirection = useRef<string|null>('right')
 
@@ -94,7 +97,7 @@ export const Carousel = ({ className = '' }: CarouselProps) => {
     // document.querySelector instead of react ref
     const selectedEl = document.querySelector(`[data-index=item-${selected}]`) as HTMLDivElement
     carousel.current?.scrollTo({
-      left: (selectedEl?.offsetLeft || 0) - (screenWidth - 300) / 2,
+      left: (selectedEl?.offsetLeft || 0) - (window.innerWidth - 300) / 2,
       behavior: 'smooth',
     })
   }, [selected, response])
