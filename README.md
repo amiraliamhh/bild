@@ -1,4 +1,4 @@
-This project was developed using node version `14.17.4`. It's preferable to use the same version for running the project if you can.
+This project was developed using node version `14.17.4` and was also tested on node version `17.3.0`. It's preferable to use one of these versions for running the project if you can.
 
 ## Installation
 
