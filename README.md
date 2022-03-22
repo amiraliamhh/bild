@@ -27,5 +27,7 @@ This will serve a production build on port `3000`.
 
 ## Notes
 
+- File/Folder names are based on [AirBnB style guide](https://github.com/airbnb/javascript/tree/master/react#naming) 
+- Creating new Google Map API key requires a billing account and I can't create one. A development version of the map will be shown, but if you want, you can add your own API key to the `VITE_GOOGLE_MAPS_API_KEY` variable of the `.env` file.
 - If you decided to change the server port, don't forget to also update the `VITE_API_BASE` variable inside the `.env` file. 
 - In some places, some `window` properties have been memoized to improve performance. If you're using DevTools to check responsiveness, it's better to refresh the page after each change in viewport size. This way, memoized values will get updated.

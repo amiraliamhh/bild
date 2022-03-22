@@ -26,14 +26,16 @@ export const Video = ({ show, onClose }: VideoProps) => {
           <div
             className='fixed top-0 left-0 w-full h-full bg-slate-900/[.6] z-20 p-10'
             onClick={close}
+            role='dialog'
+            aria-labelledby='video-modal-title'
           >
             {/* eslint-disable-next-line */}
             <section
-              className='video-modal absolute m-auto rounded-sm inset-0 w-3/4 h-3/4 bg-white p-4 flex flex-col'
+              className='video-modal absolute m-auto rounded-sm inset-0 w-full h-1/2 md:w-3/4 md:h-3/4 bg-white p-4 flex flex-col'
               onClick={stop}
             >
               <div className='flex justify-between'>
-                <h5 className='text-2xl text-zinc-500 font-semibold'>Get to know us a little better!</h5>
+                <h5 id='video-modal-title' className='text-2xl text-zinc-500 font-semibold'>Get to know us a little better!</h5>
                 <button className='text-2xl text-zinc-500 font-semibold' onClick={close}>
                   X
                 </button>
@@ -49,7 +51,7 @@ export const Video = ({ show, onClose }: VideoProps) => {
                 }
                 <iframe
                   onLoad={() => { setLoading(false) }}
-                  className={`w-3/4 h-full ${loading ? 'opacity-0' : 'opacity-100'}`}
+                  className={`w-full md:w-3/4 h-full ${loading ? 'opacity-0' : 'opacity-100'}`}
                   src='https://www.youtube.com/embed/QqsLTNkzvaY'
                   title='YouTube video player'
                   frameBorder='0'
